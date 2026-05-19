@@ -27,7 +27,7 @@ class Offer(BaseModel):
     partner_url: str
     landing_urls: list[str]
     prelandings: list[Prelanding]
-    devices: Optional[str]
+    devices: Optional[str | list[str]]
     countries: str
     categories: list[str]
     payout: list[Payout]
