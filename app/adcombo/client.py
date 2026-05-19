@@ -27,7 +27,7 @@ async def fetch_all_offers() -> list:
 
     total_pages = -(-first_page.total // settings.per_page)  # ceil division
     for page in range(2, total_pages + 1):
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
         result = await fetch_offers(page=page)
         offers.extend(result.offers)
 
