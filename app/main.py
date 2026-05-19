@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 from app.database import engine, Base
 from app.offers.router import router as offers_router
+from app.campaigns.router import router as campaigns_router
 
 app = FastAPI(title="Sales Bot", version="0.1.0")
 
 app.include_router(offers_router)
+app.include_router(campaigns_router)
 
 
 @app.on_event("startup")
